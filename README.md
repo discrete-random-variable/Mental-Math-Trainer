@@ -2,19 +2,7 @@
 
 A modular, terminal-based mental math trainer built with modern C++20. The project emphasizes clean software architecture, constraint-based arithmetic generation, and an adaptive practice engine. Skill performance is tracked independently and practice is prioritized using normalized accuracy and response-time metrics, with the architecture designed to evolve toward Glicko-2 ratings and spaced repetition.
 
----
 
-## Resume Description
-
-> **Adaptive Mental Math Trainer | C++20, CMake**
->
-> - Engineered a modular terminal-based mental math trainer using modern C++20, using polymorphic question generators and a layered architecture with clear separation of concerns.
-> - Implemented an adaptive question selection algorithm that prioritizes weaker skills using per-category performance metrics and normalized response times.
-> - Modeled arithmetic skills independently while supporting prerequisite-based progression where appropriate.
-> - Built persistent analytics tracking accuracy and historical session data using `nlohmann/json`, integrated via modern CMake dependency management.
-> - Organized the project as reusable modules with clear ownership boundaries, modern C++20 idioms, and extensible component interfaces.
-
----
 
 ## Features
 
@@ -135,6 +123,15 @@ adaptive-math-trainer/
 │   │   ├── SkillManager.h              # Stats & records owner
 │   │   ├── AdaptiveSelector.h          # Weighted priority selector
 │   │   └── Session.h                   # Top-level orchestrator
+│   ├── generators/
+│   │   ├── BasicAdditionGenerator.h
+│   │   ├── CarryAdditionGenerator.h
+│   │   ├── BasicSubtractionGenerator.h
+│   │   ├── BorrowSubtractionGenerator.h
+│   │   ├── TablesMultiplicationGenerator.h
+│   │   ├── LargerMultiplicationGenerator.h
+│   │   ├── ExactDivisionGenerator.h
+│   │   └── LargerDivisionGenerator.h
 │   ├── statistics/
 │   │   └── Statistics.h                # Analytics & report formatting
 │   ├── persistence/
@@ -149,16 +146,6 @@ adaptive-math-trainer/
 │   │   ├── SkillManager.cpp
 │   │   ├── AdaptiveSelector.cpp
 │   │   └── Session.cpp
-│   ├── generators/
-│   │   ├── BasicAdditionGenerator.h
-│   │   ├── CarryAdditionGenerator.h
-│   │   ├── BasicSubtractionGenerator.h
-│   │   ├── BorrowSubtractionGenerator.h
-│   │   ├── TablesMultiplicationGenerator.h
-│   │   ├── LargerMultiplicationGenerator.h
-│   │   ├── ExactDivisionGenerator.h
-│   │   └── LargerDivisionGenerator.h
-│   ├── statistics/
 │   │   └── Statistics.cpp
 │   ├── persistence/
 │   │   └── Persistence.cpp
@@ -173,7 +160,12 @@ adaptive-math-trainer/
 
 ## Screenshots
 
-> Screenshots and an animated terminal demo will be added after the first stable release.
+<img width="836" height="552" alt="screenshot-2026-07-19_14-56-34" src="https://github.com/user-attachments/assets/f135daab-cd29-4a8a-936c-666d04bf85e1" />
+<img width="712" height="356" alt="screenshot-2026-07-19_14-56-49" src="https://github.com/user-attachments/assets/aaf6b6d8-7186-47e2-90ad-0b035785d7f7" />
+<img width="640" height="977" alt="screenshot-2026-07-19_14-58-32" src="https://github.com/user-attachments/assets/66b340b9-5688-4147-a8c6-41edc014f835" />
+<img width="841" height="680" alt="screenshot-2026-07-19_14-59-00" src="https://github.com/user-attachments/assets/3c277cdd-3411-44f6-b404-cd1a7a0b6b6e" />
+<img width="684" height="980" alt="screenshot-2026-07-19_14-59-25" src="https://github.com/user-attachments/assets/c91e0b7a-574e-42ce-b1d2-bae71de4d713" />
+
 
 
 ---
