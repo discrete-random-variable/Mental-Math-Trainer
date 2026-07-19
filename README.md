@@ -181,7 +181,7 @@ adaptive-math-trainer/
 ### Build
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/discrete-random-variable/adaptive-math-trainer.git
 cd adaptive-math-trainer
 mkdir build && cd build
 cmake ..
@@ -214,7 +214,7 @@ On first run, you will see the main menu. Start a practice session to begin. You
 ### During a Session
 
 - Type your numeric answer and press Enter
-- Type `quit`, `q`, or `exit` to end the session early
+- Enter with empty answer or type `quit`, `q`, or `exit` to end the session early
 - Streaks of 5+ and 10+ correct answers are highlighted
 
 ### Session End
