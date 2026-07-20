@@ -178,7 +178,7 @@ adaptive-math-trainer/
 - **CMake 3.14+**
 - **Internet connection** (CMake FetchContent downloads `nlohmann/json` on first build)
 
-### Build
+### Build (Linux)
 
 ```bash
 git clone https://github.com/discrete-random-variable/adaptive-math-trainer.git
@@ -188,10 +188,22 @@ cmake ..
 cmake --build .
 ```
 
-### Run
+### Run (Linux)
 
 ```bash
 ./adaptive-math-trainer
+```
+### Build and Run (Windows (CMD))
+```bash
+git clone https://github.com/discrete-random-variable/adaptive-math-trainer.git
+cd adaptive-math-trainer
+mkdir build
+cd build
+cmake ..
+cmake --build . --config Release
+cd Release
+adaptive-math-trainer.exe
+
 ```
 
 On first run, you will see the main menu. Start a practice session to begin. Your progress is saved automatically.
